@@ -1,13 +1,213 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>SkillTrack - Skill Development Platform</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Special Celebration 🎉</title>
+
+<style>
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #ff8a00, #ffd54f, #ff5f6d);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.card {
+    width: 100%;
+    max-width: 600px;
+    background: white;
+    border-radius: 25px;
+    padding: 25px;
+    text-align: center;
+    box-shadow: 0 10px 35px rgba(0,0,0,0.3);
+}
+
+.diyas {
+    font-size: 35px;
+    margin-bottom: 10px;
+}
+
+h1 {
+    color: #d35400;
+    font-size: 38px;
+    margin: 5px 0;
+}
+
+h2 {
+    color: #8e44ad;
+    margin: 10px 0;
+}
+
+.subtitle {
+    font-size: 18px;
+    color: #555;
+}
+
+.photo {
+    width: 100%;
+    max-width: 450px;
+    border-radius: 20px;
+    margin: 20px auto;
+    display: block;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.25);
+}
+
+.message {
+    color: #444;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+button {
+    border: none;
+    border-radius: 30px;
+    padding: 14px 22px;
+    margin: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    background: #e67e22;
+    color: white;
+}
+
+button:hover {
+    transform: scale(1.05);
+}
+
+#surprise {
+    display: none;
+    margin-top: 20px;
+    padding: 20px;
+    border-radius: 18px;
+    background: #fff3cd;
+    color: #7d4e00;
+    font-size: 18px;
+    line-height: 1.6;
+}
+</style>
+</head>
+
+<body>
+
+<div class="card">
+
+    <div class="diyas">
+        🪔 ✨ 🪔 ✨ 🪔
+    </div>
+
+    <h1>शुभ दीपावली! 🪔</h1>
+
+    <h2>Tanuja Didi & Riya Didi 💖</h2>
+
+    <p class="subtitle">
+        ✨ Diwali • Lakshmi Pujan • Birthday ✨
+    </p>
+
+    <!-- YOUR PHOTO -->
+    <img
+        src="photo.jpg"
+        class="photo"
+        alt="Tanuja Didi and Riya Didi"
+    >
+
+    <div class="message">
+
+        🪔 Wishing you both a very Happy Diwali! 🪔
+
+        <br><br>
+
+        May Goddess Lakshmi bless you with
+        happiness, success, good health and
+        lots of beautiful moments. 🌸✨
+
+        <br><br>
+
+        And this Diwali is even more special
+        because it is also a birthday celebration! 🎂🎉
+
+        <br><br>
+
+        <b>🎂 HAPPY BIRTHDAY! 🎂</b>
+
+        <br><br>
+
+        Keep smiling, keep shining and keep
+        making every moment special! 💕
+    </div>
+
+    <!-- YOUR SONG -->
+    <audio id="song" loop>
+        <source src="song.mp3" type="audio/mpeg">
+    </audio>
+
+    <br>
+
+    <button onclick="playSong()">
+        🎵 Play Special Song
+    </button>
+
+    <button onclick="showSurprise()">
+        🎁 Open Surprise
+    </button>
+
+    <div id="surprise">
+
+        🪔✨ शुभ दीपावली! ✨🪔
+
+        <br><br>
+
+        🎂 <b>HAPPY BIRTHDAY!</b> 🎂
+
+        <br><br>
+
+        💖 May your special day shine brighter
+        than all the Diwali lights! 💖
+
+        <br><br>
+
+        🎉 Lots of happiness, success and blessings! 🎉
+
+        <br><br>
+
+        🪔💫 Keep smiling & keep shining! 💫🪔
+
+    </div>
+
+    <div class="diyas">
+        🪔 💖 🪔 💖 🪔
+    </div>
+
+</div>
+
+<script>
+
+function playSong() {
+
+    const song = document.getElementById("song");
+
+    song.play().catch(function() {
+        alert("Please click the Play Special Song button again.");
+    });
+
+}
+
+function showSurprise() {
+
+    document.getElementById("surprise").style.display = "block";
+
+}
+
+</script>
+
+</body>
 </html>
